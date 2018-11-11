@@ -18,3 +18,23 @@
     fwrite($fileHandler, $string);
     fclose($fileHandler);
     }
+    function saveToDatabase($firstname, $lastname, $email, $password, $confirm_password, $tel, $gender, $country){
+    $serverName = "localhost";
+    $database = "sign-up";
+    $username = "root";
+    $password = "guest123";
+
+    $conn = mysqli_connect($serverName, $username, $password, $database);
+    if(!$conn){
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    $sql = "INSERT INTO users (firstname, lastname, email, password, confirm_password, tel, gender, country, created_at)
+        VALUES ('$firstname' , '$Lastname' , '$email', '$password', '$confirmpassword', '$phonenumber', '$gender', '$country'), NOW())";
+    $result = mysqli_query ($conn, $sql);
+
+    if(!$result){
+        die("Error: " . $sql. "<br>" . mysqli_error($conn));
+    }
+    mysqli_close($conn);
+    }
+<?php
