@@ -1,0 +1,30 @@
+/*Bordered Form*/
+form {
+    border: 3px solid #020202;
+    background-color: #ccc;
+    width: 50%;
+    box-align: center;
+}
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=number],
+input[type=country] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box
+}
+button{
+    background-color: #4CAF50;
+    color: white;
+    margin: 8px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+}
+button:hover{
+    opacity: 0.8;
+}
