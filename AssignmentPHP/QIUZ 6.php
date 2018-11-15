@@ -1,29 +1,13 @@
 <?php
-function add()
-	
+function()	
 {     	
 $w=100;      	
 $u=50; 
 		 
 $sum=$w+$u;
-         	
-echo "The sum of w and u is".$sum;
-}
-	
-function sub()
-	   
-{         	
-$w=100;
-$u=50; 
+  	echo "The sum of w and u is".$sum <br>;
 		
 $sub=$w-$u;
-         	
-echo "The subtraction of w from u is".$sub;
+    echo "The subtraction of w from u is".$sub <br>;
 }
-	  
-//call function whenever you need
-	  
-add();
-sub();
-
 ?>
