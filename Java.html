@@ -1,0 +1,65 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
+    <script>
+    var person = {
+    name: ['firstName', 'lastName'],
+    age: yourAge,
+    gender: yourGender,
+    interests: ['yourInterest', 'anotherInterest'],
+    bio: function() {
+    alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age +
+    ' years old. She likes ' + this.interests[0] + ' and ' +
+    this.interests[1] + '.');
+    },
+    greeting: function() {
+    alert('Hi! I\'m ' + this.name[0] + '.');
+    }
+    };
+    </script> 
+    <title>JavaAssignment</title>
+</head>
+<body>
+    <form>
+        <Fieldset>
+            <label for="firstname"><b>First Name:</b></label>
+                <input type="text" placeholder="Enter First name" name="firstname" >
+                <br>
+                
+            <label for="Lastname"><b>Last Name:</b></label>
+                <input type="text" placeholder="Enter Last name" name="lastname" >
+                <br>
+
+            <label for="age"><b>Age</b></label>
+                <input type="number" placeholder="age" name="age" value="">
+                <br>
+
+            <label for="gender"><b>Gender:</b></label>
+                <br>
+                <input type="radio" placeholder="female" name="gender" value="female" id="gender1">
+                <label for="female">Female</label><br>
+                <input type="radio" placeholder="male" name="gender" value="male" id="gender2">
+                <label for="male">Male</label>
+                <br>
+            <label for="interests"><b>Interest:</b></label><br>
+                <input type="checkbox" placeholder="cooking" name="Interests" value="cooking">
+                <label for="Interest">Cooking</label><br>
+                <input type="checkbox" placeholder="drawing" name="Interests" value="drawing">
+                <label for="Interest">Drawing</label><br>
+                <input type="checkbox" placeholder="dancing" name="Interests" value="dancing">
+                <label for="Interest">Dancing</label><br>
+                <input type="checkbox" placeholder="Coding" name="Interests" value="Coding">
+                <label for="Interest">Coding</label><br>
+
+                <button type="submit">Login</button><br>
+                <label><input type="checkbox" checked="checked" name="remember">Remember me</label>
+        </Fieldset>
+    </form>
+    
+</body>
+</html>
