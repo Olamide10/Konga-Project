@@ -1,0 +1,28 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wishlist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+</head>
+<body>
+    <input type="text" id="textfield"/>
+        <button id="add">Add to Wishlist</button>
+        <div class="wishlist">
+            <h1>Wishlist</h1>
+            <ul id="list"></ul>
+        </div>
+
+    <!--using jquery for adding the list item-->
+    <script>
+        $(document).ready(function(){
+            $("#add").click(function(){
+                var textfield = $("#textfield").val();
+                $("#list").append("<li>" + textfield + "</li>");
+            });
+        });
+    </script>
+</body>
+</html>
