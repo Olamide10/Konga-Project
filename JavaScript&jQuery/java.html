@@ -1,0 +1,117 @@
+<input type="text" id="textfield"/>
+    <button id="add">Add to Wishlist</button>
+<div class="wishlist">
+        <h1>Wishlist</h1>
+            <ul id="list"></ul>
+</div>
+
+
+
+
+<div class="md-wishlist" mbsc-form>
+    <img src="https://img.mobiscroll.com/demos/nike.png" class="md-wishlist-img">
+    <div class=" mbsc-padding">
+        <div class="md-title">Nike Women's Air Relentless 3 Running </div>
+        <div class="md-desc md-center">
+            <div>Great lightweight pattern with a midfoot TPU panel for lockdown. </div>
+            <div>Phylite midsole for a lightweight ride and air unit in the heel offer the right blend of cushioning and a smooth ride. </div>
+            <div>BRS 1000 outsole in the crash pad for durability.</div>
+        </div>
+
+        <div class="md-price md-center"><span class="md-old-price">$110</span> <span class="md-new-price">$64.99</span></div>
+
+        <button class="mbsc-btn mbsc-btn-block md-wish" data-icon="plus"><span class="md-wish-text">Add to wishlist</span></button>
+        <button class="mbsc-btn mbsc-btn-block">Add to cart</button>
+    </div>
+</div>
+// Use the settings object to change the theme
+mobiscroll.settings = {
+    lang: 'fr',
+    theme: 'ios'
+};
+
+document
+    .querySelector('.md-wish')
+    .addEventListener('click', function (ev) {
+        var added,
+            btn = this;
+
+        btn.classList.toggle('md-wish-added');
+        added = btn.classList.contains('md-wish-added');
+        btn.querySelector('.md-wish-text').innerText = added ? 'Remove from wishlist' : 'Add to wishlist';
+        btn.querySelector('.mbsc-ic').classList.toggle('mbsc-ic-plus');
+        btn.querySelector('.mbsc-ic').classList.toggle('mbsc-ic-minus');
+        mobiscroll.toast({
+            message: added ? 'Added to wishlist' : 'Removed from wishlist'
+        });
+    });
+    .md-wishlist {
+        font-size: 16px;
+    }
+    
+    .md-wishlist .md-wishlist-img {
+        width: 280px;
+        padding-top: 3em;
+        margin: 0 auto;
+        display: block;
+    }
+    
+    .md-wishlist .md-title {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 1.4em;
+        padding: .5em 0;
+    }
+    
+    .md-wishlist .md-price {
+        font-size: 20px;
+        padding-bottom: 1em;
+        text-align: center;
+    }
+    
+    .md-wishlist .md-price .md-new-price {
+        color: red;
+    }
+    
+    .md-wishlist .md-price .md-old-price {
+        text-decoration: line-through;
+    }
+    
+    .md-wishlist .md-desc {
+        padding-bottom: 2em;
+        font-size: 14px;
+        color: #a0a0a0;
+    }
+    
+    .md-wishlist .md-desc div {
+        padding-top: .75em;
+    }
+    
+    .md-wishlist .md-center {
+        text-align: center;
+    }
+    
+    .md-wishlist .md-wish.mbsc-btn {
+        margin-bottom: 1em;
+    }
+for jquery
+mobiscroll.settings = {
+    lang: 'fr',
+    theme: 'ios'
+};
+
+
+$(function () {
+    $('.md-wish').off().click(function (ev) {
+        var added,
+            btn = $(this);
+
+        btn.toggleClass('.md-wish-added');
+        added = btn.hasClass('.md-wish-added');
+        btn.find('.md-wish-text').text(added ? 'Remove from wishlist' : 'Add to wishlist');
+        btn.find('.mbsc-ic').toggleClass('mbsc-ic-plus').toggleClass('mbsc-ic-minus');
+        mobiscroll.toast({
+            message: added ? 'Added to wishlist' : 'Removed from wishlist'
+        });
+    });
+});    

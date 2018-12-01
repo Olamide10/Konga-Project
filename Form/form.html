@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <link href="form.css" rel="stylesheet" type="text/css">
+            <title>Login Form</title>
+        </head>
+    <body>
+       <form action=”process.php” method=”post” enctype=”multipart/form-data”>
+            <div class= "imgcontainer">
+                
+                    <a href="#">
+                        <img src= "form\picture.JPG" class="logo" style="margin-top:25px; width:120px">
+                    </a>
+                        
+                <br>
+                <h3>WELCOME TO THE 10TH EDITION OF THE WORLD COMPETE-ARCH</h3>
+            </div>
+            <div class="container">
+                <label for="firstname"><b>First Name:</b></label>
+                <input type="text" placeholder="Enter First name" name="firstname" required>
+                <br>
+                
+                <label for="Lastname"><b>Last Name:</b></label>
+                <input type="text" placeholder="Enter Last name" name="Lastname" required>
+                <br>
+
+                <label for="email"><b>Email:</b></label>
+                <input type="email" placeholder="Enter email address" name="email" required>
+                <br>
+
+                <label for="password"><b>Password:</b></label>
+                <input type="password" placeholder="Enter password" name="password" required>
+                <br>
+
+                <label for="password"><b>Confirm Password:</b></label> 
+                <input type="password" placeholder="Confirm password" name="confirmpassword" required>
+                <br>
+
+                <label for="phonenumber"><b>Phone number:</b></label>
+                <input type="number" placeholder="Enter Phone number" name="phonenumber" required>
+                <br>
+
+                <b>Gender:</b>
+                <br>
+                <input type="radio" placeholder="female" name="female" value="female">
+                <label for="female">Female</label><br>
+                <input type="radio" placeholder="male" name="male" value="female">
+                <label for="male">Male</label>
+                <br>
+
+                <label for="country"><b>Country:</b></label>
+                <select name="country" placeholder="country">
+                    <option value=Argentina>Argentina</option>
+                    <option value=Albenia>Albenia</option>
+                    <option value=Angola>Angola</option>
+                    <option value=Brazil>Brazil</option>
+                    <option value=Burkinafaso>Burkinafaso</option>
+                    <option value=Bostuana>Bostuana</option>
+                    <option value=Canada>Canada</option>
+                    <option value=Cyprus>Cyprus</option>
+                    <option value=Costa-Rica>Costa-Rica</option>
+                    <option value=Denmark>Denmark</option>
+                    <option value=Dibuti>Dibuti</option>
+                    <option value=Eygpt>Eygpt</option>
+                    <option value=Eythopia>Eythopia</option>
+                    <option value=Eritra>Eritria</option>
+                    <option value=Finland>Finland</option>
+                    <option value=France>France</option>
+                    <option value=Figi>Figi</option>
+                    <option value=Germany>Germany</option>
+                    <option value=Georgia>Geogia</option>
+                    <option value=Gambia>Gambia</option>
+                    <option value=Holland>Holland</option>
+                    <option value=Hungary>Hungary</option>
+                    <option value=Honduras>Honduras</option>
+                    <option value=Iceland>Iceland</option>
+                    <option value=India>India</option>
+                    <option value=Indonesia>Indonesia</option>
+                    <option value=Japan>Japan/option>
+                    <option value=Jordan>Jordan</option>
+                    <option value=kuwate>kuwate</option>
+                    <option value=Lutiania>Lutiania</option>
+                    <option value=Malaysia>Malaysia</option>
+                    <option value=Morocco>Morocco</option>
+                    <option value=Muritania>Muri</option> 
+                    <option value=Niger>Niger</option>  
+                    <option value=Nigeria>Nigeria</option> 
+                    <option value=Norway>Norway</option>    
+                    <option value=Oman>Oman</option> 
+                    <option value=Parkistan>Parkistan</option> 
+                    <option value=Polland>Polland</option>       
+                    <option value=Peru>Peru</option>
+                    <option value=Qatar>Qatar</option>
+                    <option value=Russia>Russia</option>
+                    <option value=Rwanda>Rwanda</option>
+                    <option value=Spain>Spain</option>
+                    <option value=South-Korea>South-Korea</option>
+                </select>
+                <br><br><br>
+                <button type="submit">Login</button><br>
+                <label><input type="checkbox" checked="checked" name="remember">Remember me</label>
+             </div>
+             <div class="container" style="background-color: #f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button><br>
+            <span class="password">Forgot <a href="#">Password</a></span>
+            </div>
+        </form>
+    </body>
+</html>
