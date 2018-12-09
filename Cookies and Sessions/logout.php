@@ -1,8 +1,6 @@
 <?php
    session_start();
-   init 'memory_limit', '32M';
-  
-   if(session_start()){
+    if(session_end()){
       
       header("Location: signup.php");
    }

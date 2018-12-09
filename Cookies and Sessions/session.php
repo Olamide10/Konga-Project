@@ -1,5 +1,5 @@
 <?php
-   include('session.php');
+   include('welcome.php');
    session_start();
    
    $user_check = $_SESSION['login_user'];
@@ -11,6 +11,6 @@
    $login_session = $row['email'];
    
    if(!isset($_SESSION['login_user'])){
-      header("location:login.php");
+      header("location:signup.php");
    }
 ?>

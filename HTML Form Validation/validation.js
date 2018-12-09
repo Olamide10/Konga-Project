@@ -1,6 +1,6 @@
 <script> 
-    function validateForm(){
-      //validate firstname
+    function validateForm() {
+         //validate firstname
         var name = document.regForm.firstname;
           if (name.value == "") {
           alert("Please input your firstname");
