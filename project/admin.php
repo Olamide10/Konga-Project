@@ -71,7 +71,7 @@
                         <div class="panel">
                             <h2>Admin Login</h2>
                         </div>
-                        <form id="Login">
+                        <form action="adminprocess.php" method="post" enctype="multipart/form-data" id="Login">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="inputName" placeholder="Username" required>
                             </div>
