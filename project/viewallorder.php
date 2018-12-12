@@ -10,23 +10,23 @@ if(!$conn){
 }
 
 // Attempt select query execution
-$sql = "SELECT * FROM order";
+$sql = "SELECT * FROM `order`";
     if($result = mysqli_query($conn, $sql)){
         if(mysqli_num_rows($result) > 0){
             echo "<table>";
                 echo "<tr>";
-                    echo "<th>id</th>";
+                    echo "<th>order_id</th>";
                     echo "<th>menu</th>";
-                    echo "<th>customer_name</th>";
+                    echo "<th>customername</th>";
                     echo "<th>quantity_item</th>";
                     echo "<th>address_cust</th>";
                     echo "<th>phone_num</th>";
                 echo "</tr>";
         while($row = mysqli_fetch_array($result)){
             echo "<tr>";
-                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['order_id'] . "</td>";
                 echo "<td>" . $row['menu'] . "</td>";
-                echo "<td>" . $row['customer_name'] . "</td>";
+                echo "<td>" . $row['customername'] . "</td>";
                 echo "<td>" . $row['quantity_item'] . "</td>";
                 echo "<td>" . $row['address_cust'] . "</td>";
                 echo "<td>" . $row['phone_num'] . "</td>";
@@ -49,10 +49,16 @@ $sql = "SELECT * FROM order";
     <html>
         <head>
             <title>View All Order</title>
+            <link href="bootstrap.min.css" rel="stylesheet">
         </head>
         <body>
-            <h3>So many orders to view!</h3>
+                <script src = "jquery-3.3.1.min.js"></script>
+                <script src = "popper.min.js"></script>
+                <script src="bootstrap.min.js"> </script>
+            
+                <h4>So many orders to view!</h4>
                 <a href="admin.php">Return to Form</a>
+            
         </body>
         
 </html>
